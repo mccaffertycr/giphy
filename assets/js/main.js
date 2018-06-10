@@ -16,7 +16,7 @@ var giphyApp = {
 }
 
 giphyApp.gifBtns.forEach(function(ele) {
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + ele + "&api_key=&limit=10";
+    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + ele + "&api_key=smYf27zDQ04iZVF7nLGQpBbJJeP4e8Rc&limit=10";
     $.ajax({
         url: queryURL,
         method: "GET"
