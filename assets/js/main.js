@@ -1,22 +1,22 @@
  
 var giphyApp = {
     gifBtn: [],
-    gifBtns: ["bill murray", 
-              "robert downey jr", 
-              "sam rockwell", 
-              "bruce lee", 
-              "stephen colbert", 
-              "dave chappelle", 
-              "christian bale", 
-              "daniel day lewis"],
+    // gifBtns: ["bill murray", 
+    //           "robert downey jr", 
+    //           "sam rockwell", 
+    //           "bruce lee", 
+    //           "stephen colbert", 
+    //           "dave chappelle", 
+    //           "christian bale", 
+    //           "daniel day lewis"],
     gifImg: [],
     limit: 25,
     gifURL: [],
     gifSearch: []
 }
 
-giphyApp.gifBtns.forEach(function(ele) {
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + ele + "&api_key=smYf27zDQ04iZVF7nLGQpBbJJeP4e8Rc&limit=10";
+// giphyApp.gifBtns.forEach(function(ele) {
+    var queryURL = "http://api.giphy.com/v1/gifs/trending&api_key=smYf27zDQ04iZVF7nLGQpBbJJeP4e8Rc";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -57,6 +57,6 @@ giphyApp.gifBtns.forEach(function(ele) {
 //    // Append the table row to the tbody element
 //  tableBody.append(newRow);
 //  });
-});
+// });
 // });
 

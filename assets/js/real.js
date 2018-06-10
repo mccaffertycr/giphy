@@ -8,11 +8,13 @@ $(document).ready(function() {
                  "sam rockwell", 
                  "bruce lee", 
                  "stephen colbert", 
+                 "elton john", 
                  "dave chappelle", 
                  "christian bale", 
                  "daniel day lewis",
                  "richard pryor",
                  "kevin hart",
+                 "madonna",
                  "will ferrell",
                  "lil wayne",
                  "samuel l jackson",
@@ -20,8 +22,7 @@ $(document).ready(function() {
                  "tom cruise",
                  "brad pitt",
                  "paul newman",
-                 "madonna",
-                 "elton john"]
+                 "frank ocean"]
     
     //function that displays a button for each gif
     
@@ -66,7 +67,7 @@ $(document).ready(function() {
     
     function displayGifs() {
         var celeb = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + celeb + "&api_key=smYf27zDQ04iZVF7nLGQpBbJJeP4e8Rc&limit=15";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + celeb + "&api_key=smYf27zDQ04iZVF7nLGQpBbJJeP4e8Rc&limit=10";
         
         $.ajax({
             url: queryURL,
@@ -97,9 +98,9 @@ $(document).ready(function() {
                 //images come in paused by default
                 gifImg.attr("data-state", "still");
                 gifImg.addClass("image");
-                gifDiv.append(gifImg);
+                gifDiv.prepend(gifImg);
                 //add div to the already existing divs
-                $("#img-holder").prepend(gifDiv);
+                $("#img-holder").append(gifDiv);
             }
         });
     }
